@@ -1,10 +1,4 @@
-const http = require('http');
-
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Servidor rodando com sucesso!');
-});
-
-server.listen(3000, () => {
-    console.log('Servidor rodando em http://localhost:3000');
+const PORT = process.env.PORT || 3000;  // Usando a variável de ambiente PORT
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
